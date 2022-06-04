@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["vite/client", "vite-plugin-vue-layouts/client", "vite-plugin-pages/client"]
+  },
+  "exclude": ["dist", "node_modules"]
+}

@@ -13,12 +13,10 @@
     "types": [
       "node"
       // "@intlify/vite-plugin-vue-i18n/client",
-      // "vite-plugin-pages/client",
-      // "vite-plugin-vue-layouts/client"
     ],
     "paths": {
-      "~app/*": ["./packages/app/*"],
-      "@app/*": ["./packages/app/*"]
+      "~app/*": ["./packages/app/src/*"],
+      "@app/*": ["./packages/app/src/*"]
     }
   },
   "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue"]
