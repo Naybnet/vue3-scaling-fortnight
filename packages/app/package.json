@@ -9,6 +9,8 @@
     "test": "echo 0"
   },
   "dependencies": {
+    "@vueuse/core": "^8.6.0",
+    "@vueuse/head": "^0.7.6",
     "pinia": "^2.0.14",
     "vue": "^3.2.36",
     "vue-i18n": "^9.1.10",

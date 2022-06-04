@@ -19,7 +19,7 @@ export default defineConfig({
     Components({ resolvers: [HeadlessUiResolver()], dts: 'src/components.d.ts' }),
     Layouts(),
     AutoImport({
-      imports: ['vue', 'vue-router', 'vue-i18n'],
+      imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head', '@vueuse/core'],
       dts: 'src/auto-imports.d.ts',
     }),
     Icons({ autoInstall: true }),
