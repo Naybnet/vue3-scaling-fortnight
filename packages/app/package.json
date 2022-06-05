@@ -6,21 +6,29 @@
     "build": "npm run typecheck && vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
-    "test": "echo 0"
+    "test": "echo 0",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
   },
   "dependencies": {
+    "@mdi/font": "^6.7.96",
     "@vueuse/core": "^8.6.0",
     "@vueuse/head": "^0.7.6",
     "pinia": "^2.0.14",
+    "roboto-fontface": "^0.10.0",
     "vue": "^3.2.36",
     "vue-i18n": "^9.1.10",
-    "vue-router": "^4.0.15"
+    "vue-router": "^4.0.15",
+    "vuetify": "^3.0.0-beta.3",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.19",
     "@iconify-json/twemoji": "^1.1.4",
     "@intlify/vite-plugin-vue-i18n": "^3.4.0",
     "@vitejs/plugin-vue": "^2.3.3",
+    "histoire": "^0.7.0",
     "tailwindcss-elevation": "^1.0.1",
     "typescript": "^4.7.3",
     "unplugin-auto-import": "^0.8.7",
@@ -30,6 +38,7 @@
     "vite-plugin-pages": "^0.23.0",
     "vite-plugin-pages-sitemap": "^1.2.2",
     "vite-plugin-vue-layouts": "^0.6.0",
+    "vite-plugin-vuetify": "1.0.0-alpha.11",
     "vite-plugin-windicss": "^1.8.4",
     "vue-tsc": "^0.36.1",
     "windicss": "^3.5.4",

@@ -1,3 +1,4 @@
 dist
 public
 packages/*/src/assets
+pnpm-lock.yaml

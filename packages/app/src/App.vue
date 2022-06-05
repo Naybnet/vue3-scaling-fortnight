@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+console.log('css support', CSS.supports('toto'))
+useHead({
+  title: 'Vue Scaling Fortnight',
+  meta: [{ name: 'description', content: 'Boilerplate' }],
+})
+</script>
 
 <template>
   <RouterView />

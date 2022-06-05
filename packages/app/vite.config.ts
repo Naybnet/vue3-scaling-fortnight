@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'url'
 
 import Components from 'unplugin-vue-components/vite'
-import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
+import { Vuetify3Resolver } from 'unplugin-vue-components/resolvers'
 import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
 import generateSitemap from 'vite-plugin-pages-sitemap'
@@ -11,16 +11,18 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import WindiCSS from 'vite-plugin-windicss'
+import vuetify from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    Components({ resolvers: [HeadlessUiResolver()], dts: 'src/components.d.ts' }),
+    Components({ resolvers: [Vuetify3Resolver()], dts: 'src/components.d.ts' }),
     Layouts(),
     AutoImport({
       imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head', '@vueuse/core'],
       dts: 'src/auto-imports.d.ts',
+      vueTemplate: true,
     }),
     Icons({ autoInstall: true }),
     Pages({
@@ -30,6 +32,7 @@ export default defineConfig({
       include: [fileURLToPath(new URL('locales/**', import.meta.url))],
     }),
     WindiCSS(),
+    vuetify({ autoImport: true }),
   ],
   resolve: {
     alias: {
